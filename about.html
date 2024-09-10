@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczOIMPOrHmpiY3HLpG5shdMFdnASkwxRC3j7rMNjltFTb_pd3QdJchrVOqEl8pKV7WFORYIciUtdSALAbpn5LUPZRYAF8nd0-9xesxOzGPgKu5xpDw=w2400" type="image/x-icon">
+    <title>Home-Harsheel Kumar Sahoo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+        .ubuntu-bold {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* Basic reset and styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Ubuntu';
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            flex: 1;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: gradientAnimation 30s infinite alternate;
+            transition: background 1.5s ease;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .navbar-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            border: 2px solid white;
+            border-radius: 50%; /* Makes the image round */
+            margin-right: 10px; /* Adds space between the image and the brand name */
+        }
+
+        /* Make the image responsive */
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            line-height: 1.7;
+        }
+
+        .typing-animation {
+            border-right: 2px solid #333;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+        }
+
+        /* Footer */
+        .footer {
+            background: black;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: flex;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .navbar-links a {
+                padding: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #333;
+            }
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(90deg, #4b6cb7, #182848);
+            }
+            20% {
+                background: linear-gradient(90deg, #6a11cb, #2575fc);
+            }
+            40% {
+                background: linear-gradient(90deg, #11998e, #38ef7d);
+            }
+            60% {
+                background: linear-gradient(90deg, #f7971e, #ffd200);
+            }
+            80% {
+                background: linear-gradient(90deg, #654ea3, #eaafc8);
+            }
+            100% {
+                background: linear-gradient(90deg, #4b6cb7, #182848);
+            }
+        }
+
+        /* YouTube Logo */
+        .youtube-logo {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-left">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPuXFg_P3FBihMVjw1Afi4FRaP2xQjzjFW-5vYA6QeNRgZegYc-gQ4rpHLs2Km93qKJn1aOqoCTGMSDPYddqrNqqWwok_k6PKD9GnMOTfuhn5qEkw=w2400" alt="Profile Photo" class="profile-photo">
+                <a href="index.html" class="brand">Harsheel Kumar Sahoo</a>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="notes.html">Notes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello! I'm Harsheel Kumar Sahoo, a passionate tech enthusiast and student. I enjoy photography, observing nature, and exploring the world of coding and design. My journey in technology is driven by a curiosity to create and innovate. I believe in sharing knowledge, and that's why I’ve created resources to help others learn computer science. You can also check out my work and projects on my <a href="https://www.youtube.com/@harsheelkumarsahoo" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" class="youtube-logo"> YouTube channel</a>.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p></p>
+            <p>Made Entirely By Harsheel Kumar Sahoo</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navbarLinks = document.getElementById('navbar-links');
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
