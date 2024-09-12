@@ -256,92 +256,47 @@
 
     <!-- Main Content -->
     <main class="container">
-
-
         <section id="practical1">
             <h2>Practical 1</h2>
             <h3>Program that accepts two integers and prints their sum.</h3>
             <div class="code-output-container">
-
                 <div class="code-section">
                     <h3>Source Code</h3>
+                    <pre><code># Practical 1
+a = int(input('Enter the first integer: '))
+b = int(input('Enter the second integer: '))
 
-                    <pre><code>#Practical 1
-a=int(input('Enter the first integer:'))
-b=int(input('Enter the second integer:'))
-
-sum=a+b
+sum = a + b
 
 print('The two integers are:', a, b)
 print('The sum of the given two integers is:', sum)</code></pre>
-
                 </div>
-
                 <div class="output-section">
                     <h3>Output</h3>
-                    <pre><code>Enter the first integer:60
-Enter the second integer:52
+                    <pre><code>Enter the first integer: 60
+Enter the second integer: 52
 The two integers are: 60 52
-The sum of given two integers are:112
-</code></pre>
+The sum of the given two integers is: 112</code></pre>
                 </div>
-
             </div>
             <hr class="section-divider">
         </section>
-
 
         <section id="practical2">
             <h2>Practical 2</h2>
+            <h3>Program that accepts the radius of a circle and prints its area.</h3>
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Source Code</h3>
-                    <pre><code># Python code for Practical 2
-def example():
-    return 2 + 2
-print(example())</code></pre>
+                    <pre><code># Practical 2
+r = int(input('Enter the radius of the circle: '))
+area = 3.14 * r**2
+print('The area of the circle is:', area)</code></pre>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
-                    <pre><code>4</code></pre>
-                </div>
-            </div>
-            <hr class="section-divider">
-        </section>
-
-        <section id="practical3">
-            <h2>Practical 3</h2>
-            <div class="code-output-container">
-                <div class="code-section">
-                    <h3>Source Code</h3>
-                    <pre><code># Python code for Practical 3
-def fibonacci(n):
-    a, b = 0, 1
-    while a < n:
-        print(a, end=' ')
-        a, b = b, a + b
-fibonacci(10)</code></pre>
-                </div>
-                <div class="output-section">
-                    <h3>Output</h3>
-                    <pre><code>0 1 1 2 3 5 8</code></pre>
-                </div>
-            </div>
-            <hr class="section-divider">
-        </section>
-
-        <section id="practical4">
-            <h2>Practical 4</h2>
-            <div class="code-output-container">
-                <div class="code-section">
-                    <h3>Source Code</h3>
-                    <pre><code># Python code for Practical 4
-squares = [x**2 for x in range(5)]
-print(squares)</code></pre>
-                </div>
-                <div class="output-section">
-                    <h3>Output</h3>
-                    <pre><code>[0, 1, 4, 9, 16]</code></pre>
+                    <pre><code>Enter the radius of the circle: 4
+The area of the circle is: 50.24</code></pre>
                 </div>
             </div>
             <hr class="section-divider">
