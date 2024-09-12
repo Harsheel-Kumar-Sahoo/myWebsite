@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczOIMPOrHmpiY3HLpG5shdMFdnASkwxRC3j7rMNjltFTb_pd3QdJchrVOqEl8pKV7WFORYIciUtdSALAbpn5LUPZRYAF8nd0-9xesxOzGPgKu5xpDw=w2400" type="image/x-icon">
+    <title>Home - Harsheel Kumar Sahoo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+        .ubuntu-bold {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Ubuntu';
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            flex: 1;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: gradientAnimation 30s infinite alternate;
+            transition: background 1.5s ease;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .navbar-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Make the image responsive */
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        .code-output-container {
+            display: flex;
+            margin-top: 1rem;
+            gap: 1rem; /* Adds space between Source Code and Output */
+        }
+
+        .code-section, .output-section {
+            background-color: #333;
+            color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .code-section {
+            border-right: 1px solid #444;
+        }
+
+        .footer {
+            background: black;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: flex;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .navbar-links a {
+                padding: 1rem;
+            }
+
+            .code-output-container {
+                flex-direction: column;
+                gap: 0; /* Removes space between Source Code and Output */
+            }
+
+            .code-section, .output-section {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #444;
+            }
+        }
+
+        /* Animations */
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(90deg, #4b6cb7, #182848);
+            }
+            20% {
+                background: linear-gradient(90deg, #6a11cb, #2575fc);
+            }
+            40% {
+                background: linear-gradient(90deg, #11998e, #38ef7d);
+            }
+            60% {
+                background: linear-gradient(90deg, #f7971e, #ffd200);
+            }
+            80% {
+                background: linear-gradient(90deg, #654ea3, #eaafc8);
+            }
+            100% {
+                background: linear-gradient(90deg, #4b6cb7, #182848);
+            }
+        }
+
+        /* Horizontal Line */
+        .section-divider {
+            border: 0;
+            height: 2px; /* Increased height for a bolder line */
+            background: #555; /* Darker color for better visibility */
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-left">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPuXFg_P3FBihMVjw1Afi4FRaP2xQjzjFW-5vYA6QeNRgZegYc-gQ4rpHLs2Km93qKJn1aOqoCTGMSDPYddqrNqqWwok_k6PKD9GnMOTfuhn5qEkw=w2400" alt="Profile Photo" class="profile-photo">
+                <a href="index.html" class="brand">Harsheel Kumar Sahoo</a>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="notes.html">Notes</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+
+        <section id="practical1">
+            <h2>Practical 1</h2>
+            <h3>Program that accepts two integers and prints their sum.</h3>
+            <div class="code-output-container">
+
+                <div class="code-section">
+                    <h3>Source Code</h3>
+
+                    <pre><code>#Practical 1
+a=int(input('Enter the first integer:'))
+b=int(input('Enter the second integer:'))
+
+sum=a+b
+
+print('The two integers are:', a, b)
+print('The sum of the given two integers is:', sum)</code></pre>
+
+                </div>
+
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the first integer:60
+Enter the second integer:52
+The two integers are: 60 52
+The sum of given two integers are:112
+</code></pre>
+                </div>
+
+            </div>
+            <hr class="section-divider">
+        </section>
+
+
+        <section id="practical2">
+            <h2>Practical 2</h2>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Python code for Practical 2
+def example():
+    return 2 + 2
+print(example())</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>4</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical3">
+            <h2>Practical 3</h2>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Python code for Practical 3
+def fibonacci(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a + b
+fibonacci(10)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>0 1 1 2 3 5 8</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical4">
+            <h2>Practical 4</h2>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Python code for Practical 4
+squares = [x**2 for x in range(5)]
+print(squares)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>[0, 1, 4, 9, 16]</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Harsheel Kumar Sahoo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
