@@ -30,7 +30,6 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow: hidden; /* Ensure no scrollbars */
         }
 
         .container {
@@ -130,7 +129,6 @@
         /* Main Content */
         main {
             padding: 2rem 0;
-            position: relative; /* Needed for confetti effect */
         }
 
         section {
@@ -228,17 +226,6 @@
                 background: linear-gradient(90deg, #4b6cb7, #182848);
             }
         }
-
-        /* Canvas Style */
-        .confetti-canvas {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* So that it doesn't block interactions */
-            z-index: 0; /* Make sure it's behind other content */
-        }
     </style>
 </head>
 <body>
@@ -270,6 +257,10 @@
             <h1 class="typing-animation">Welcome to my website !!!!</h1>
             <p>Your one-stop destination for study materials and notes. I have uploaded comprehensive notes and tutorials on various computer science topics, all completely free of cost.</p>
         </section>
+        
+  
+        
+       
     </main>
 
     <!-- Footer -->
@@ -280,65 +271,11 @@
         </div>
     </footer>
 
-    <!-- Confetti Canvas -->
-    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
-
     <script>
         document.getElementById('mobile-menu').addEventListener('click', function() {
             const navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
         });
-
-        const canvas = document.getElementById('confetti-canvas');
-        const ctx = canvas.getContext('2d');
-        let confettiArray = [];
-        let colors = ['#ff0', '#f0f', '#0ff', '#0f0', '#f00', '#00f'];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        function createConfetti(x, y) {
-            for (let i = 0; i < 10; i++) {
-                confettiArray.push({
-                    x: x,
-                    y: y,
-                    color: colors[Math.floor(Math.random() * colors.length)],
-                    radius: Math.random() * 5 + 2,
-                    velocityX: Math.random() * 6 - 3,
-                    velocityY: Math.random() * 6 - 3
-                });
-            }
-        }
-
-        function drawConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            confettiArray.forEach(confetti => {
-                ctx.beginPath();
-                ctx.arc(confetti.x, confetti.y, confetti.radius, 0, Math.PI * 2);
-                ctx.fillStyle = confetti.color;
-                ctx.fill();
-                confetti.x += confetti.velocityX;
-                confetti.y += confetti.velocityY;
-                confetti.velocityY += 0.1; // gravity
-                confetti.radius *= 0.98; // shrinking
-            });
-            confettiArray = confettiArray.filter(confetti => confetti.radius > 0.5);
-        }
-
-        function animateConfetti() {
-            drawConfetti();
-            requestAnimationFrame(animateConfetti);
-        }
-
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-        setInterval(() => {
-            createConfetti(0, canvas.height - 10); // Confetti from bottom-left corner
-            createConfetti(canvas.width, canvas.height - 10); // Confetti from bottom-right corner
-        }, 500); // Create new confetti every 500ms
-        animateConfetti();
     </script>
 </body>
 </html>
