@@ -30,6 +30,9 @@
             flex-direction: column;
             min-height: 100vh;
         }
+      
+
+
 
         .container {
             width: 90%;
@@ -425,11 +428,569 @@ The remainder is:1.0</code></pre>
             <hr class="section-divider">
         </section>
       
+      
+        <section id="practical8">
+            <h2>Practical 8</h2>
+            <h3>Program to find whether a given number is even or odd.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 8
+a=int(input('Enter the number:'))
+if a%2==0:
+    print('The number is even' )
+else:
+    print('The number is odd' )</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the number:100
+The number is even</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+      
+        <section id="practical9">
+            <h2>Practical 9</h2>
+            <h3>Program to find largest among three integer.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 9
+a=int(input('Enter the first integer:'))
+b=int(input('Enter the second integer:'))
+c=int(input('Enter the third integer:'))
+if a>b and a>c:
+    print(a,'is the largest integer')
+if b>a and b>c:
+    print(b,'is the largest integer')
+if c>b and c>a:
+    print(c,'is the largest integer')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the first integer:13542
+Enter the second integer:3563
+Enter the third integer:35764
+35764 is the largest integer</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical10">
+            <h2>Practical 10</h2>
+            <h3>Program to find lowest among three integers.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><p>#Practical 10
+a=int(input('Enter the first integer:'))
+b=int(input('Enter the second integer:'))
+c=int(input('Enter the third integer:'))
+if (a < b) and (a < c):
+    print(a,'is the lowest integer')
+if (b < a) and (b < c):
+    print(b,'is the lowest integer')
+if (c < b) and (c < a):
+    print(c,'is the lowest integer')</p></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the first integer:0
+Enter the second integer:235
+Enter the third integer:1241
+0 is the lowest integer</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+
+
+        <section id="practical11">
+            <h2>Practical 11</h2>
+            <h3>Program that accepts length and breadth of rectangle and calculate its area.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 11
+l=float(input('Enter the length of rectangle:'))
+b=float(input('Enter the breadth of rectangle:'))
+area=l*b
+print('Rectangle Specifications')
+print('Length =',l)
+print('Breadth=',b)
+print('Area=',area)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the length of rectangle:12
+Enter the breadth of rectangle:20
+Rectangle Specifications
+Length = 12.0
+Breadth= 20.0
+Area= 240.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+  
+        <section id="practical12">
+            <h2>Practical 12</h2>
+            <h3>Program that accepts height and weight to calculate BMI.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 12
+W=float(input('Enter the weight in kgs:'))
+H=float(input('Enter the height in meters:'))
+BMI=W/(H**2)
+print('BMI is:',BMI)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the weight in kgs:85
+Enter the height in meters:1.76
+BMI is: 27.44059917355372</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+
+
+    
+        <section id="practical13">
+            <h2>Practical 13</h2>
+            <h3>Program that reads the number n and print the value of n^2,n^3,n^4.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 13
+a=float(input('Enter the value of n:'))
+b=a**2
+c=a**3
+d=a**4
+print('The value of n^2 is:',b)
+print('The value of n^3 is:',c)
+print('The value of n^4 is:',d)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the value of n:7
+The value of n^2 is: 49.0
+The value of n^3 is: 343.0
+The value of n^4 is: 2401.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+
+        <section id="practical14">
+            <h2>Practical 14</h2>
+            <h3>Program to accept the marks of five subjects and calculate the average marks.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 14
+a=float(input('Enter the marks of first subject:'))
+b=float(input('Enter the marks of second subject:'))
+c=float(input('Enter the marks of third subject:'))
+d=float(input('Enter the marks of forth subject:'))
+e=float(input('Enter the marks of fifth subject:'))
+Average=(a+b+c+d+e)/5
+print('The average marks are:',Average)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the marks of first subject:99
+Enter the marks of second subject:99
+Enter the marks of third subject:99
+Enter the marks of forth subject:99
+Enter the marks of fifth subject:99
+The average marks are: 99.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical15">
+            <h2>Practical 15</h2>
+            <h3>Program to accept height in cm and convert into feet and inches.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 15
+a=float(input('Enter your height in cm:'))
+Feet=a*0.032
+Inch=a*0.393
+print('Your height in feet is:',Feet)
+print('Your height in inch is:',Inch)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter your height in cm:176
+Your height in feet is: 5.632
+Your height in inch is: 69.168</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+      
+        <section id="practical16">
+            <h2>Practical 16</h2>
+            <h3>Program to accept the age and print if one is eligible to vote or not.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 16
+age=int(input('Enter your age:'))
+if age>=18:
+    print('You are eligible to vote')
+else:
+    print('You are not eligible to vote')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter your age:17
+You are not eligible to vote</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical17">
+            <h2>Practical 17</h2>
+            <h3>Program to accept two numbers and check if the first number is fully divisible by second number or not.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 17
+a=float(input('Enter the first number:'))
+b=float(input('Enter the second number:'))
+if a%b==0:
+    print('The first number is fully divisible by second number')
+else:
+    print('The first number is not fully divisible by second number')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code> Enter the first number:24
+Enter the second number:748
+The first number is not fully divisible by second number</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical18">
+            <h2>Practical 18</h2>
+            <h3>Program to read base,height,width of parallelogram and calculate its area and perimeter.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 18
+b=float(input('Enter the base of parallelogram:'))
+w=float(input('Enter the width of parallelogram:'))
+h=float(input('Enter the height of parallelogram:'))
+Area=b*h
+Perimeter=2*(b+w)
+print('The area of parallelogram is:',Area)
+print('The perimeter of parallelogram is:',Perimeter)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code> Enter the base of parallelogram:10
+Enter the width of parallelogram:24
+Enter the height of parallelogram:15
+The area of parallelogram is: 150.0
+The perimeter of parallelogram is: 68.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical19">
+            <h2>Practical 19</h2>
+            <h3>Program to accept the year and check if it is a leap year or not.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 19
+a=int(input('Enter the year:'))
+if a%100==0:
+    if a%400==0:
+        print('This years is a leap year')
+    else:
+        print('This years is not a leap year')
+else:
+    if a%4==0:
+        print('This year is a leap year')
+    else:
+        print('This year is not a leap year')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><codeEnter the year:1900
+This years is not a leap year</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical20">
+            <h2>Practical 20</h2>
+            <h3>Program to obtain x,y,z and calculate 4x^4+3y^3+9z+6π.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 20
+print('To calculate 4x^4+3y^3+9z+6pi')
+x=float(input('Enter the number x:'))
+y=float(input('Enter the number y:'))
+z=float(input('Enter the number z:'))
+import math
+b=(4*math.pow(x,4))+(3*math.pow(y,3))+(9*z)+(6*math.pi)
+print('The result of the above expression is:',b)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code> To calculate 4x^4+3y^3+9z+6pi
+Enter the number x:10
+Enter the number y:23
+Enter the number z:43
+The result of the above expression is: 76906.84955592154</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical21">
+            <h2>Practical 21</h2>
+            <h3>Program to input a number and print its square if it is odd otherwise print its square root.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 21
+x=float(input('Enter the number:'))
+import math
+a=math.pow(x,2)
+b=math.sqrt(x)
+if x%2!=0:
+    print('The value of square is:',a)
+else:
+    print('The value of square root is:',b)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the number:343
+The value of square is: 117649.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+    
+        <section id="practical22">
+            <h2>Practical 22</h2>
+            <h3>Program to input a number and check whether it is positive,negative or zero.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 22
+a=float(input('Enter the number:'))
+if a>=0:
+    if a==0:
+        print('The number is zero')
+    else:
+        print('The number is positive no.')
+else:
+    print('The number is negative no.')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the number:-123
+The number is negative no.</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical23">
+            <h2>Practical 23</h2>
+            <h3>Program to input percentage marks of a student and find the grade as per following criteria.</h3>
+          <table border="1">
+    <tr>
+        <th>Marks</th>
+        <th>Grade</th>
+    </tr>
+    <tr>
+        <td>>=90</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td>75-90</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>60-75</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>Below 60</td>
+        <td>D</td>
+    </tr>
+   
+</table>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><p># Practical 23
+a=float(input('Enter the percentage marks:'))
+if a>=90:
+    print('The student has got an A grade')
+elif a>=75 and a<90:
+    print('The student has got an B grade')
+elif a>=60 and a<75:
+    print('The student has got an C grade')
+else:
+    print('The student has got an D grade')</p></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the percentage marks:55
+The student has got an D grade</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+              
+        <section id="practical24">
+            <h2>Practical 24</h2>
+            <h3>Program to enter a number and check if it is a prime number or not.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 24
+num=int(input('Enter the number:'))
+for i in range(2,num//2+1):
+    if num%i==0:
+        print('It is not a prime number')
+        break
+else:
+    print('It is a prime number')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the number:23
+It is a prime number</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical25">
+            <h2>Practical 25</h2>
+            <h3>Program to display a menu for calculating area of circle or perimeter of the circle.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 25
+r=float(input('Enter the radius of the circle:'))
+print('1. Calculate Perimeter')
+print('2. Calculate Area')
+choice=int(input('Enter your choice (1 or 2):'))
+if choice ==1:
+    peri=2*3.14*r
+    print('Perimeter of the circle with radius',r,':',peri)
+else:
+    area=3.14*r*r
+    print('Area of the circle with radius',r,':',area)</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the radius of the circle:10
+1. Calculate Perimeter
+2. Calculate Area
+Enter your choice (1 or 2):2
+Area of the circle with radius 10.0 : 314.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical26">
+            <h2>Practical 26</h2>
+            <h3>Program that reads two numbers and an arithmetic operators and displays the computer result.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 26
+a=float(input('Enter the first number:'))
+b=float(input('Enter the second number:'))
+c=input('Enter the operator [/,*,+,-]:')
+if c=='/':
+    r=a/b
+    print(r)
+elif c=='*':
+    r=a*b
+    print(r)
+elif c=='+':
+    r=a+b
+    print(r)
+elif c=='-':
+    r=a-b
+    print(r)
+else:
+    print('Invalid oprator')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter the first number:10
+Enter the second number:346
+Enter the operator [/,*,+,-]:+
+356.0</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <section id="practical27">
+            <h2>Practical 27</h2>
+            <h3>Program to print whether given character is an uppercase or a lowercase character or a digit or any other character.</h3>
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Source Code</h3>
+                    <pre><code># Practical 27
+ch=input('Enter a single character:')
+if ch>='A' and ch<='Z':
+    print('You have entered an uppercase character')
+elif ch>='a' and ch<='z':
+    print('You have entered a lowercase character')
+elif ch>='0' and ch<='9':
+    print('You have entered a digit')
+else:
+    print('You have entered a special character')</code></pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre><code>Enter a single character:P
+You have entered an uppercase character</code></pre>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+
+
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Made Entirely By Harsheel Kumar Sahoo</p>
+        <p>Practicals Page Done By Harsheel Kumar Sahoo & Parth Variya</p>
     </footer>
 
     <script>
